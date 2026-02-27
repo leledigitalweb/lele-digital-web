@@ -70,80 +70,80 @@ document.querySelectorAll('.faq-item').forEach(item => {
 
 
 // ── Carrusel infinito ──
-(function () {
-    const track = document.getElementById('carouselTrack');
-    const prev = document.getElementById('carouselPrev');
-    const next = document.getElementById('carouselNext');
-    const dots = document.querySelectorAll('.cdot');
-    const cards = Array.from(document.querySelectorAll('.carousel-card'));
-    const total = cards.length;
-    let current = 0;
-    let startX = 0;
-    let isMoving = false;
+// (function () {
+//     const track = document.getElementById('carouselTrack');
+//     const prev = document.getElementById('carouselPrev');
+//     const next = document.getElementById('carouselNext');
+//     const dots = document.querySelectorAll('.cdot');
+//     const cards = Array.from(document.querySelectorAll('.carousel-card'));
+//     const total = cards.length;
+//     let current = 0;
+//     let startX = 0;
+//     let isMoving = false;
 
-    // Clonar para loop infinito
-    cards.forEach(c => track.append(c.cloneNode(true)));
-    cards.forEach(c => track.prepend(c.cloneNode(true)));
-    // Ahora el track tiene: [4 clones fin] [4 originales] [4 clones inicio]
-    // El offset inicial es `total` (saltamos los clones del principio)
-    let pos = total; // posición real en el track
+//     // Clonar para loop infinito
+//     cards.forEach(c => track.append(c.cloneNode(true)));
+//     cards.forEach(c => track.prepend(c.cloneNode(true)));
+//     // Ahora el track tiene: [4 clones fin] [4 originales] [4 clones inicio]
+//     // El offset inicial es `total` (saltamos los clones del principio)
+//     let pos = total; // posición real en el track
 
-    function getCardW() {
-        return track.children[0].offsetWidth + 24;
-    }
+//     function getCardW() {
+//         return track.children[0].offsetWidth + 24;
+//     }
 
-    function setPos(index, animate) {
-        track.style.transition = animate ? 'transform .4s cubic-bezier(.4,0,.2,1)' : 'none';
-        track.style.transform = `translateX(-${index * getCardW()}px)`;
-    }
+//     function setPos(index, animate) {
+//         track.style.transition = animate ? 'transform .4s cubic-bezier(.4,0,.2,1)' : 'none';
+//         track.style.transform = `translateX(-${index * getCardW()}px)`;
+//     }
 
-    function goTo(dir) {
-        if (isMoving) return;
-        isMoving = true;
-        pos += dir;
-        current = ((current + dir) % total + total) % total;
-        setPos(pos, true);
-        dots.forEach((d, i) => d.classList.toggle('active', i === current));
-    }
+//     function goTo(dir) {
+//         if (isMoving) return;
+//         isMoving = true;
+//         pos += dir;
+//         current = ((current + dir) % total + total) % total;
+//         setPos(pos, true);
+//         dots.forEach((d, i) => d.classList.toggle('active', i === current));
+//     }
 
-    track.addEventListener('transitionend', () => {
-        isMoving = false;
-        // Si llegamos a los clones del final, saltar a los originales
-        if (pos >= total * 2) {
-            pos = total;
-            setPos(pos, false);
-        }
-        // Si llegamos a los clones del inicio, saltar a los originales
-        if (pos <= 0) {
-            pos = total;
-            setPos(pos, false);
-        }
-    });
+//     track.addEventListener('transitionend', () => {
+//         isMoving = false;
+//         // Si llegamos a los clones del final, saltar a los originales
+//         if (pos >= total * 2) {
+//             pos = total;
+//             setPos(pos, false);
+//         }
+//         // Si llegamos a los clones del inicio, saltar a los originales
+//         if (pos <= 0) {
+//             pos = total;
+//             setPos(pos, false);
+//         }
+//     });
 
-    prev.addEventListener('click', () => goTo(-1));
-    next.addEventListener('click', () => goTo(1));
-    dots.forEach(d => d.addEventListener('click', () => {
-        const target = +d.dataset.index;
-        const dir = target - current;
-        if (dir !== 0) goTo(dir);
-    }));
+//     prev.addEventListener('click', () => goTo(-1));
+//     next.addEventListener('click', () => goTo(1));
+//     dots.forEach(d => d.addEventListener('click', () => {
+//         const target = +d.dataset.index;
+//         const dir = target - current;
+//         if (dir !== 0) goTo(dir);
+//     }));
 
-    // Swipe
-    track.addEventListener('pointerdown', e => {
-        startX = e.clientX;
-        track.setPointerCapture(e.pointerId);
-    });
-    track.addEventListener('pointerup', e => {
-        const diff = startX - e.clientX;
-        if (Math.abs(diff) > 50) goTo(diff > 0 ? 1 : -1);
-    });
+//     // Swipe
+//     track.addEventListener('pointerdown', e => {
+//         startX = e.clientX;
+//         track.setPointerCapture(e.pointerId);
+//     });
+//     track.addEventListener('pointerup', e => {
+//         const diff = startX - e.clientX;
+//         if (Math.abs(diff) > 50) goTo(diff > 0 ? 1 : -1);
+//     });
 
-    // Autoplay
-    setInterval(() => goTo(1), 4000);
+//     // Autoplay
+//     setInterval(() => goTo(1), 4000);
 
-    // Init: esperar un frame para que el DOM esté pintado
-    requestAnimationFrame(() => {
-        setPos(pos, false);
-    });
-})();
+//     // Init: esperar un frame para que el DOM esté pintado
+//     requestAnimationFrame(() => {
+//         setPos(pos, false);
+//     });
+// })();
 
