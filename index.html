@@ -26,17 +26,19 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#beneficios" class="nav-close">Beneficios</a></li>
         <li><a href="#incluye" class="nav-close">Qué incluye</a></li>
-        <li><a href="#precio" class="nav-close">¿Cuánto cuesta?</a></li>
+        <li><a href="#proceso" class="nav-close">¿Cómo funciona?</a></li>
+        <!-- <li><a href="#precio" class="nav-close">¿Cuánto cuesta?</a></li> -->
         <!-- <li><a href="#precio" class="nav-close">Precio</a></li> -->
         <li><a href="#faq" class="nav-close">FAQ</a></li>
-        <li class="nav-mobile-cta"><a href="#precio" class="btn btn-secondary nav-close">Ver precio</a></li>
+        <li><a href="#contacto" class="nav-close">Contacto</a></li>
+        <!-- <li class="nav-mobile-cta"><a href="#precio" class="btn btn-secondary nav-close">Ver precio</a></li> -->
         <li class="nav-mobile-cta"><a
             href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20crear%20mi%20p%C3%A1gina%20web" target="_blank"
             class="btn btn-whatsapp nav-close">Contactar</a></li>
       </ul>
 
       <div class="nav-cta nav-desktop-cta">
-        <a href="#precio" class="btn btn-secondary">Ver precio</a>
+        <!-- <a href="#precio" class="btn btn-secondary">Ver precio</a> -->
         <a href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20crear%20mi%20p%C3%A1gina%20web" target="_blank"
           class="btn btn-primary">Contactar</a>
       </div>
@@ -294,7 +296,7 @@
             <span class="browser-url">estudiojuridicopaz.com.ar</span>
           </div>
           <img class="card-image"
-            src="https://scontent.feze13-1.fna.fbcdn.net/v/t39.30808-6/241777333_105549261876230_4706740363018549923_n.png?_nc_cat=100&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeG1_wHs5N3Ek0tG_FzsTyXltn-otWAy3X-2f6i1YDLdf3v0O7pPL_WlwzPW4rsBHrItUKJNaCcEAOoK93qFySF0&_nc_ohc=Ubv1-beH6TwQ7kNvwF-2hsJ&_nc_oc=AdnqxzTpckJ_qmxOLMuJWvKQdWyq9HX2bu8wWkN54VIgfvPfXKYxYb6XxvAmGRuOb7s&_nc_zt=23&_nc_ht=scontent.feze13-1.fna&_nc_gid=uWW84YIh7dvZmwExarCtPQ&oh=00_Afu4t4f9-DgtdJCC1gwG6L1YtTHAqfu6lN-5DlzJUC2y9Q&oe=69A6712E"
+            src="./assets/img/estudio juridico.png"
             alt="Estudio Jurídico Paz">
           <div class="browser-content">
             <div class="mock-logo">⚖️ Estudio Jurídico Paz</div>
@@ -404,10 +406,48 @@
     </div>
   </section>
 
+  <!-- FORMULARIO -->
+  <section id="contacto">
+    <div class="container">
+      <span class="label reveal">Contacto</span>
+      <h2 class="reveal">¿Tenés alguna pregunta?</h2>
+      <p class="reveal">Completá el formulario y te respondo a la brevedad.</p>
+
+      <form class="contact-form reveal" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+        <!-- Campo anti-spam oculto, requerido por Netlify -->
+        <input type="hidden" name="form-name" value="contacto">
+        <p style="display:none"><input name="bot-field"></p>
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">WhatsApp (opcional)</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="11 1234 5678">
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contame sobre tu negocio..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Enviar mensaje</button>
+
+      </form>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
   <section id="cta-final">
     <div class="container">
-      <span class="label reveal">Empezá hoy</span>
       <h2 class="reveal">Tu negocio merece una página web profesional.</h2>
       <p class="reveal">Empezá hoy.</p>
       <a href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20crear%20mi%20p%C3%A1gina%20web" target="_blank"
@@ -423,7 +463,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Lele<span>Digital</span></div>
+    <div class="footer-logo">Lele<span>Digital</span>Web</div>
     <span class="footer-domain">leledigitalweb.com.ar</span>
     <p>Desarrollo de páginas web simples y profesionales.</p>
     <a href="https://wa.me/5491112345678?text=Hola%2C%20quiero%20crear%20mi%20p%C3%A1gina%20web" target="_blank"
