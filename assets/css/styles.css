@@ -194,8 +194,8 @@
     }
 
     .logo {
-        font-family: var(--font-display);
-        font-weight: 800;
+        font-family: system-ui, -apple-system, sans-serif;
+        font-weight: 700;
         font-size: 18px;
         color: var(--ink);
         text-decoration: none;
@@ -1214,5 +1214,3 @@
             justify-content: center;
         }
     }
-    
-    
