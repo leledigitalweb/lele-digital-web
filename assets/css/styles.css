@@ -1056,20 +1056,30 @@
     footer p {
         color: rgba(255, 255, 255, .45);
         font-size: 13px;
-        margin-bottom: 20px;
+        margin: 10px 0 0;
     }
 
     footer .footer-domain {
         color: rgba(255, 255, 255, .6);
         font-size: 13px;
         font-family: var(--font-display);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         display: block;
     }
 
     footer .btn-whatsapp {
         font-size: 14px;
         padding: 12px 22px;
+    }
+
+    .footer__instagram {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color var(--transition);
     }
 
     /* ── WhatsApp Flotante ── */
