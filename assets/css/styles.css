@@ -11,7 +11,7 @@
         --white: #ffffff;
         --ink: #0d0d0d;
         --ink-60: #5a5a5a;
-        --ink-30: #b0afa9;
+        --ink-30: #767672;
         --accent: #1a1a2e;
         --accent-2: #0f3460;
         --green: #16a34a;
@@ -1214,3 +1214,5 @@
             justify-content: center;
         }
     }
+    
+    
