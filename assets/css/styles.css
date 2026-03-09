@@ -40,7 +40,7 @@
 
     /* ── Utility ── */
     .container {
-        max-width: 780px;
+        max-width: 820px;
         margin: 0 auto;
         padding: 0 24px;
     }
@@ -387,6 +387,8 @@
     }
 
     /* ── Hero ── */
+    /* ── Hero ── */
+    /* ── Hero ── */
     #hero {
         padding: 100px 0 0;
         background: var(--bg);
@@ -439,16 +441,16 @@
         margin-bottom: 20px;
     }
 
-    h1 em {
-        font-style: normal;
+    h2 em {
+        font-style: italic;
         color: var(--accent-2);
     }
 
     .hero-sub {
         font-size: 1.15rem;
-        max-width: 500px;
+        max-width: 600px;
         margin-bottom: 40px;
-        line-height: 1.7;
+        line-height: 1.5;
     }
 
     .hero-actions {
@@ -470,6 +472,8 @@
         color: var(--ink-60);
     }
 
+    /* ── Problema ── */
+    /* ── Problema ── */
     /* ── Problema ── */
     #problema .highlight-box {
         background: #fef2f2;
@@ -493,6 +497,8 @@
         font-weight: 600;
     }
 
+    /* ── Solución ── */
+    /* ── Solución ── */
     /* ── Solución ── */
     #solucion .sol-grid {
         display: grid;
@@ -519,6 +525,8 @@
         font-size: 22px;
     }
 
+    /* ── Beneficios ── */
+    /* ── Beneficios ── */
     /* ── Beneficios ── */
     #beneficios .benefits-grid {
         display: grid;
@@ -556,6 +564,8 @@
         font-size: 13px;
     }
 
+    /* ── Incluye ── */
+    /* ── Incluye ── */
     /* ── Incluye ── */
     #incluye .includes-grid {
         display: grid;
@@ -599,6 +609,8 @@
         font-weight: 600;
     }
 
+    /* ── Proceso ── */
+    /* ── Proceso ── */
     /* ── Proceso ── */
     #proceso .steps {
         display: grid;
@@ -886,6 +898,11 @@
         align-items: center;
     }
 
+    .sobre-chips {
+        display: flex;
+        flex-direction: column;
+    }
+
     @media (max-width: 640px) {
         .sobre-inner {
             grid-template-columns: 1fr;
@@ -934,6 +951,7 @@
 
     .sobre-chips {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 8px;
         margin-top: 4px;
