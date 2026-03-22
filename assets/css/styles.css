@@ -609,6 +609,68 @@
         font-weight: 600;
     }
 
+    /* ── Incluye (dos planes) ── */
+    .includes-plans {
+        display: flex;
+        gap: 24px;
+        margin-top: 36px;
+    }
+
+    .includes-col {
+        flex: 1;
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius);
+        padding: 28px 24px;
+    }
+
+    .includes-col--featured {
+        border-color: var(--accent-2);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .includes-plan-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .includes-plan-name {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--ink);
+    }
+
+    .includes-plan-price {
+        font-family: var(--font-display);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink-30);
+    }
+
+    .includes-col--featured .includes-plan-price {
+        color: var(--accent-2);
+    }
+
+    .includes-col .includes-grid {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+
+    .check--featured {
+        background: var(--accent-2) !important;
+    }
+
+    @media (max-width: 640px) {
+        .includes-plans {
+            flex-direction: column;
+        }
+    }
+
     /* ── Proceso ── */
     /* ── Proceso ── */
     /* ── Proceso ── */
@@ -883,6 +945,73 @@
         width: 100%;
         justify-content: center;
         margin-top: 28px;
+    }
+
+    /* ── Precio simplificado ── */
+    /* ── Precio simplificado ── */
+    /* ── Precio simplificado ── */
+    #precio {
+        text-align: center;
+    }
+
+    .price-simple {
+        max-width: 480px;
+        margin: 0 auto;
+        background: var(--white);
+        border: 2px solid var(--accent);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+    }
+
+    .price-simple-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 32px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .price-simple-row--featured {
+        background: var(--bg);
+    }
+
+    .price-simple-name {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--ink);
+    }
+
+    .price-simple-amount {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--accent-2);
+    }
+
+    .price-simple-footer {
+        padding: 28px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .price-simple-footer .btn {
+        margin-top: 16px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        .price-simple-row {
+            padding: 16px 20px;
+        }
+
+        .price-simple-footer {
+            padding: 20px;
+        }
     }
 
     /* ── Sobre mí ── */
