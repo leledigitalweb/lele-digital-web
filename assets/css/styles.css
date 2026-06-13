@@ -661,14 +661,101 @@
         margin-top: 0;
     }
 
+    .btn-planes {
+        margin: 16px auto;
+        text-align: center;
+    }
+
     .check--featured {
         background: var(--accent-2) !important;
+    }
+
+    .price-plan {
+        border: 1px solid #e8e8e8;
+        border-radius: 18px;
+        margin-bottom: 18px;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .price-plan summary {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    .price-plan summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .price-summary-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .price-toggle {
+        height: 35px;
+        width: 35px;
+        background: var(--green);
+        font-size: 28px;
+        font-weight: 500;
+        transition: transform .25s ease;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.2;
+        color: white;
+    }
+
+    .price-plan[open] .price-toggle {
+        transform: rotate(45deg);
+        background: #16a34a73;
+        color: black;
+    }
+
+    .price-plan-content {
+        padding: 0 24px 24px;
+    }
+
+    .price-plan-desc {
+        margin-top: 6px;
+        font-size: 0.95rem;
+        color: #777;
+    }
+
+    .price-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 24px;
+    }
+
+    .price-features li {
+        padding: 10px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .price-features li:last-child {
+        border-bottom: none;
+    }
+
+    .price-plan[open] .price-simple-row {
+        border-bottom: 1px solid #eee;
+    }
+
+    .price-plan--featured {
+        border: 2px solid var(--primary);
     }
 
     @media (max-width: 640px) {
         .includes-plans {
             flex-direction: column;
         }
+    }
+
+    .includes-titulo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 392px;
     }
 
     /* ── Proceso ── */
@@ -991,7 +1078,7 @@
     }
 
     .price-simple-footer {
-        padding: 28px 32px;
+        padding: 8px 32px 28px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1002,6 +1089,12 @@
         margin-top: 16px;
         width: 100%;
         justify-content: center;
+    }
+
+    .price-plan-price {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 16px;
     }
 
     @media (max-width: 480px) {
